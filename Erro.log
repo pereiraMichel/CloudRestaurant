@@ -1,0 +1,3 @@
+=========== HISTÓRICO DE ERRO ===========
+SELECT DISTINCT f.*, c.nomeCargo,           DATE_FORMAT(f.dataNascimento, '%d/%m/%Y') as 'dataNascFormat',          DATE_FORMAT(f.dataCadastro, '%d/%m/%Y') as 'dataCadFormat',          DATE_FORMAT(f.dataAlteracao, '%d/%m/%Y') as 'dataAlterFormat',          DATE_FORMAT(f.dataAdmissao, '%d/%m/%Y') as dataAdmFormat,           DATE_FORMAT(f.dataSaida, '%d/%m/%Y') as dataSaidaFormat,           TIME_FORMAT(f.horaEntrada, '%h:%m') as horaEntradaFormatada,           TIME_FORMAT(f.horaSaida, '%h:%m') as horaSaidaFormatada FROM funcionario f INNER JOIN cargos c ON f.codCargo = c.idCargos INNER JOIN telefones tel ON f.idFuncionario = tel.codProprietario AND tel.tipoProprietario = 'funcionario'
+ FIM DO HISTÓRICO 
